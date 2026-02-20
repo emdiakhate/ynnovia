@@ -50,7 +50,7 @@ export const Navbar = () => {
         );
       }
       return (
-        <Link key={link.label} to={link.href.replace('#', '')} className={className} onClick={() => setMobileOpen(false)}>
+        <Link key={link.label} to={link.href} className={className} onClick={() => setMobileOpen(false)}>
           {link.label}
         </Link>
       );
