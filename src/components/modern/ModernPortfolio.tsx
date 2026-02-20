@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ScrollProgress } from '../animations/ScrollProgress';
 import { HeroSection } from './HeroSection';
@@ -12,6 +14,17 @@ import { CTASection } from './CTASection';
 import { Navbar } from '../Navbar';
 
 export const ModernPortfolio = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  }, [location.hash]);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <ScrollProgress />
