@@ -21,9 +21,42 @@ export interface Application {
   buttonText: string;
   image: string;
   youtubeUrl?: string;
+  youtubeUrls?: { label: string; url: string }[];
 }
 
 export const applications: Application[] = [
+  {
+    id: 5,
+    name: "AD'IA - Plateforme de Création d'Agents IA spécialisés (RH, Compta, Marketing...)",
+    category: "Intelligence Artificielle",
+    description: "Plateforme de création d'agents IA en local (RH, Marketing, Support…) garantissant la confidentialité totale des données. Toutes vos données restent chez vous, aucune fuite vers des serveurs tiers. Déploiement on-premise avec modèles open source.",
+    stack: ["Llama", "FastAPI", "React", "Docker", "ChromaDB", "RAG"],
+    metrics: ["100% données locales", "5+ types d'agents", "Confidentialité garantie"],
+    icon: Shield,
+    iconColor: "text-emerald-500",
+    categoryColor: "bg-emerald-500/10",
+    buttonText: "Voir le projet",
+    image: adiaImg,
+    youtubeUrls: [
+      { label: "Démo", url: "https://youtu.be/ggxngV3HzUY" },
+      { label: "Suite 1", url: "https://youtu.be/D0yr-9QhEy4" },
+      { label: "Suite 2", url: "https://youtu.be/Cxp8UGqBp8U" }
+    ]
+  },
+  {
+    id: 8,
+    name: "AgentBuilder - Plateforme de création d'agents IA vocaux",
+    category: "Communication",
+    description: "Plateforme de service client pour configurer un agent IA qui répond aux appels clients. L'agent renseigne les utilisateurs, qualifie les demandes et route vers le bon service. Configuration no-code de scénarios conversationnels vocaux.",
+    stack: ["WebRTC", "Whisper", "GPT-4", "ElevenLabs", "FastAPI", "React"],
+    metrics: ["Support vocal 24/7", "-60% appels manuels", "Configuration no-code"],
+    icon: Phone,
+    iconColor: "text-amber-500",
+    categoryColor: "bg-amber-500/10",
+    buttonText: "Voir le projet",
+    image: saviaImg,
+    youtubeUrl: "https://youtu.be/bIVmrFOFv5I"
+  },
   {
     id: 1,
     name: "Postelma - Plateforme Marketing Media IA",
@@ -53,7 +86,7 @@ export const applications: Application[] = [
   },
   {
     id: 3,
-    name: "CRM IA Automatisé (HubSpot/TwentyCRM)",
+    name: "CRM IA Automatisé",
     category: "CRM & Marketing",
     description: "Solution CRM complète avec automatisation du cycle de vie client/étudiant. Gestion automatisée des documents (devis, contrats, attestations), scoring intelligent des leads, enrichissement de données par IA, workflows personnalisés.",
     stack: ["HubSpot API", "TwentyCRM", "N8N", "PostgreSQL", "GPT-4"],
@@ -66,7 +99,7 @@ export const applications: Application[] = [
   },
   {
     id: 4,
-    name: "Clone NotebookLM - Podcast IA",
+    name: "Clone NotebookLM (Google) - Podcast IA",
     category: "Intelligence Artificielle",
     description: "Plateforme de génération de podcasts IA. Analyse automatique de documents (PDF, web, vidéos), création de scripts conversationnels, synthèse vocale multi-voix naturelle, interface de discussion interactive avec les contenus.",
     stack: ["LangChain", "React", "FastAPI", "ElevenLabs TTS", "Whisper", "Docker CI/CD"],
@@ -77,19 +110,6 @@ export const applications: Application[] = [
     buttonText: "Voir le projet",
     image: podcastAiImg,
     youtubeUrl: "https://youtu.be/AstoAkl2P54"
-  },
-  {
-    id: 5,
-    name: "ADIA - Plateforme de Création d'Agents IA",
-    category: "Intelligence Artificielle",
-    description: "Plateforme de création d'agents IA en local (RH, Marketing, Support…) garantissant la confidentialité totale des données. Toutes vos données restent chez vous, aucune fuite vers des serveurs tiers. Déploiement on-premise avec modèles open source.",
-    stack: ["Llama", "FastAPI", "React", "Docker", "ChromaDB", "RAG"],
-    metrics: ["100% données locales", "5+ types d'agents", "Confidentialité garantie"],
-    icon: Shield,
-    iconColor: "text-emerald-500",
-    categoryColor: "bg-emerald-500/10",
-    buttonText: "Voir le projet",
-    image: adiaImg
   },
   {
     id: 6,
@@ -116,19 +136,6 @@ export const applications: Application[] = [
     categoryColor: "bg-pink-500/10",
     buttonText: "Voir le projet",
     image: miniheroesImg
-  },
-  {
-    id: 8,
-    name: "SAVIA - Agent Vocal IA Service Client",
-    category: "Communication",
-    description: "Clone de VAPI : plateforme de service client pour configurer un agent IA qui répond aux appels clients. L'agent renseigne les utilisateurs, qualifie les demandes et route vers le bon service. Configuration no-code de scénarios conversationnels vocaux.",
-    stack: ["WebRTC", "Whisper", "GPT-4", "ElevenLabs", "FastAPI", "React"],
-    metrics: ["Support vocal 24/7", "-60% appels manuels", "Configuration no-code"],
-    icon: Phone,
-    iconColor: "text-amber-500",
-    categoryColor: "bg-amber-500/10",
-    buttonText: "Voir le projet",
-    image: saviaImg
   },
   {
     id: 9,

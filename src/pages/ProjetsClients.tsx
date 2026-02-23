@@ -25,6 +25,7 @@ interface ProjectModalData {
   categoryColor: string;
   image: string;
   youtubeUrl?: string;
+  youtubeUrls?: { label: string; url: string }[];
 }
 
 const categories = ['Toutes', 'Communication', 'Finance', 'Marketing', 'CRM & Marketing', 'Infrastructure', 'Intelligence Artificielle'];
@@ -35,6 +36,7 @@ export default function ProjetsClients() {
   const [expandedCards, setExpandedCards] = useState<Set<number | string>>(new Set());
   const [selectedCategory, setSelectedCategory] = useState('Toutes');
   const [expandedId, setExpandedId] = useState<string | null>(null);
+  const [activeVideoIndex, setActiveVideoIndex] = useState(0);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
@@ -160,16 +162,16 @@ export default function ProjetsClients() {
                     <div className="relative bg-card/40 backdrop-blur-xl border border-border/50 rounded-2xl overflow-hidden hover:border-primary/30 transition-all duration-500 hover:shadow-[0_0_40px_hsl(217,91%,60%,0.15)]">
                       <div
                         className="relative aspect-video cursor-pointer overflow-hidden"
-                        onClick={() => setSelectedProject(project)}
+                        onClick={() => { setActiveVideoIndex(0); setSelectedProject(project); }}
                       >
                         <img
-                          src={project.youtubeUrl ? getYouTubeThumbnail(project.youtubeUrl) : project.image}
+                          src={project.youtubeUrl ? getYouTubeThumbnail(project.youtubeUrl) : project.youtubeUrls?.[0] ? getYouTubeThumbnail(project.youtubeUrls[0].url) : project.image}
                           alt={project.name}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                         />
                         <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
                           <motion.div
-                            className={`w-16 h-16 rounded-full backdrop-blur-sm flex items-center justify-center shadow-[0_0_30px_hsl(217,91%,60%,0.5)] ${project.youtubeUrl ? 'bg-red-600/90' : 'bg-primary/90'}`}
+                            className={`w-16 h-16 rounded-full backdrop-blur-sm flex items-center justify-center shadow-[0_0_30px_hsl(217,91%,60%,0.5)] ${project.youtubeUrl || project.youtubeUrls ? 'bg-red-600/90' : 'bg-primary/90'}`}
                             whileHover={{ scale: 1.15 }}
                             whileTap={{ scale: 0.95 }}
                           >
@@ -179,7 +181,7 @@ export default function ProjetsClients() {
                         <Badge className={`absolute top-4 left-4 ${project.categoryColor} backdrop-blur-sm`}>
                           {project.category}
                         </Badge>
-                        {project.youtubeUrl && (
+                        {(project.youtubeUrl || project.youtubeUrls) && (
                           <span className="absolute top-4 right-4 px-2 py-1 rounded-full bg-red-600 text-white text-xs font-bold">
                             Démo
                           </span>
@@ -370,7 +372,13 @@ export default function ProjetsClients() {
           {selectedProject && (
             <div>
               <div className="relative aspect-video bg-black">
-                {selectedProject.youtubeUrl ? (
+                {selectedProject.youtubeUrls ? (
+                  <YouTubePlayer
+                    videoId={getYouTubeId(selectedProject.youtubeUrls[activeVideoIndex].url)}
+                    title={selectedProject.name}
+                    playbackRate={1.5}
+                  />
+                ) : selectedProject.youtubeUrl ? (
                   <YouTubePlayer
                     videoId={getYouTubeId(selectedProject.youtubeUrl)}
                     title={selectedProject.name}
@@ -391,6 +399,25 @@ export default function ProjetsClients() {
                   </>
                 )}
               </div>
+
+              {/* Playlist navigation */}
+              {selectedProject.youtubeUrls && selectedProject.youtubeUrls.length > 1 && (
+                <div className="flex gap-2 px-6 pt-4">
+                  {selectedProject.youtubeUrls.map((video, i) => (
+                    <button
+                      key={i}
+                      onClick={() => setActiveVideoIndex(i)}
+                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                        activeVideoIndex === i
+                          ? 'bg-red-600 text-white shadow-lg'
+                          : 'bg-muted text-muted-foreground hover:bg-muted/80'
+                      }`}
+                    >
+                      {video.label}
+                    </button>
+                  ))}
+                </div>
+              )}
 
               <div className="p-6 space-y-5">
                 <div>
