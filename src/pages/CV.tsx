@@ -97,17 +97,17 @@ const projects = [
     description: "Centralisation multi-canaux (WhatsApp, Messenger, email, chat web), routage intelligent par IA, réponses automatiques avec RAG sur base documentaire vectorisée. -50% temps de réponse, 60% d'auto-résolution.",
   },
   {
-    title: "CRM IA Automatisé (HubSpot/TwentyCRM)",
+    title: "CRM IA Automatisé",
     period: "Freelance (2024–2025)",
     description: "Gestion automatisée des documents (devis, contrats, attestations), scoring intelligent des leads, enrichissement de données par IA, workflows personnalisés. -30% charge administrative, +60% taux de conversion.",
   },
   {
-    title: "Clone NotebookLM – Podcast IA",
+    title: "Clone NotebookLM (Google) – Podcast IA",
     period: "Freelance (2024–2025)",
     description: "Analyse automatique de documents (PDF, web, vidéos), création de scripts conversationnels, synthèse vocale multi-voix naturelle, interface de discussion interactive. Génération de podcasts en 5 min.",
   },
   {
-    title: "ADIA – Plateforme de Création d'Agents IA",
+    title: "AD'IA – Plateforme de Création d'Agents IA spécialisés",
     period: "Freelance (2024–2025)",
     description: "Plateforme de création d'agents IA en local (RH, Marketing, Support…) garantissant la confidentialité totale des données. Déploiement on-premise avec modèles open source. 100% données locales.",
   },
@@ -122,9 +122,9 @@ const projects = [
     description: "Plateforme de création de contenu éducatif où l'enfant est l'acteur principal de ses histoires. Apprentissage ludique personnalisé par IA avec génération d'images et synthèse vocale.",
   },
   {
-    title: "SAVIA – Agent Vocal IA Service Client",
+    title: "AgentBuilder – Plateforme de création d'agents IA vocaux",
     period: "Freelance (2024–2025)",
-    description: "Clone de VAPI : plateforme pour configurer un agent IA vocal qui répond aux appels clients, qualifie les demandes et route vers le bon service. Configuration no-code, support vocal 24/7.",
+    description: "Plateforme pour configurer un agent IA vocal qui répond aux appels clients, qualifie les demandes et route vers le bon service. Configuration no-code, support vocal 24/7.",
   },
 ];
 
