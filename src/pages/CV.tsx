@@ -134,26 +134,25 @@ const skillsIA = {
   "Agents IA": ["LangChain / LangGraph", "Orchestration multi-agents", "Tools calling", "Mémoire", "Routage workflows n8n/Make"],
   "Prompt Engineering": ["Prompts structurés", "Few-shot", "Chain-of-thought", "Guardrails métier", "Évaluations automatiques"],
   "Fine-tuning": ["LoRA/QLoRA", "Modèles open-source", "Projet LLM Wolof"],
-  "Outils": ["n8n", "Make", "HubSpot", "Notion", "Airtable", "TwentyCRM", "Cursor", "Claude Code"],
+  "Outils": ["n8n", "Make", "HubSpot", "Notion", "Airtable"],
 };
 
 const skillsDev = {
-  "Backend": ["Python (FastAPI)", "Java (Spring Boot)", "APIs REST/webhooks", "Microservices"],
+  "Backend": ["Python (FastAPI, Pydantic, Uvicorn)", "Java (Spring Boot)", "APIs REST/webhooks", "Microservices"],
   "Frontend": ["Angular", "React", "Next.js", "Interfaces copilotes & dashboards IA"],
   "Data": ["MySQL", "PostgreSQL", "MongoDB", "Pandas", "NumPy", "Préparation données IA"],
-  "DevOps / MLOps": ["Docker", "Kubernetes (bases)", "CI/CD (GitLab, GitHub Actions)", "Logs & métriques (latence, coûts LLM)"],
+  "DevOps / MLOps / LLMOps": ["Docker", "Kubernetes (bases)", "CI/CD (GitLab, GitHub Actions)", "Logs & métriques (latence, coûts LLM)"],
   "Vibe Coding": ["Claude Code", "Cursor", "GitHub Copilot", "Lovable", "opencode"],
   "Méthodologies IA Coding": ["Spec Kit (GitHub)", "BMAD Method (Agentic Agile)", "OpenSpec"],
   "Sécurité": ["OAuth2", "JWT", "Spring Security", "Keycloak", "Gestion de secrets", "Bonnes pratiques RGPD"],
 };
 
 const skillsGestion = {
-  "Méthodologies": ["Agile/Scrum/Kanban", "Sprints 2 semaines", "Daily/Planning/Rétro", "KPIs & OKR"],
+  "Méthodologies": ["Agile/Scrum/Kanban", "Sprints", "Daily/Planning/Rétro", "KPIs & OKR"],
   "Outils Projet": ["Jira", "Confluence", "Trello/Asana", "GitHub Projects", "Roadmaps & Burndown"],
-  "Pilotage IA": ["Roadmap IA 6–12 mois", "Priorisation MoSCoW/ROI", "Cadrage cas d'usage LLM/RAG", "Arbitrage technique/métier"],
+  "Pilotage IA": ["Roadmap IA", "Priorisation MoSCoW/ROI", "Cadrage cas d'usage LLM/RAG", "Arbitrage technique/métier"],
   "Spécifications": ["Cahiers des charges LLM", "Pipelines RAG", "Métriques & SLA", "Specs technico-fonctionnelles"],
-  "Accompagnement": ["Formation équipes (20+ pers.)", "Change management", "Guides utilisateurs", "Support niveau 1–2"],
-  "Adoption": ["Suivi taux d'utilisation", "Transfert compétences", "Copilotes IA & dashboards", "Workflows n8n/HubSpot"],
+  "Accompagnement": ["Formation équipes", "Change management", "Guides utilisateurs", "Support niveau 1–2", "Transfert compétences"],
 };
 
 const education = [
@@ -172,9 +171,9 @@ const education = [
 const formations = [
   { title: "Associate AI Engineer pour développeurs (DataCamp)" },
   { title: "Google AI Essentials (Grow with Google) – Prompt engineering, IA générative" },
-  { title: "MLOps Full Course 12h (DSwithBappy, YouTube) – CI/CD, Docker, MLflow, Kubernetes" },
+  { title: "AI Engineering: Building Applications by Chip Huyen" },
+  { title: "LLMOPS From setup → RAG pipeline → FastAPI integration → testing → deployment on AWS ECS (Fargate) de Sunny Savita" },
   { title: "LangChain for LLM Application Development (DeepLearning.AI, Coursera) – RAG, agents, memory" },
-  { title: "Retrieval Augmented Generation with LangChain (DataCamp) – RAG complet, évaluation Ragas" },
   { title: "Fine-tune LLM with LoRA/QLoRA (Hugging Face, IBM) – Personnalisation modèles open-source" },
   { title: "MLOps Specialization (DeepLearning.AI, Coursera) – Pipelines ML, monitoring, déploiement cloud" },
   { title: "Objectif IA (OpenClassrooms) – Fondamentaux IA, éthique" },
