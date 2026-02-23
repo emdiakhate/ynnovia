@@ -322,13 +322,14 @@ const CV = () => {
             >
               <SectionTitle icon={Users} title="Présentation" index={0} />
               <p className="text-muted-foreground leading-relaxed">
-                Expert en transformation digitale avec 5+ ans d'expérience (ex‑développeur full‑stack Java/Angular), 
-                je conçois et déploie des solutions basées sur les LLM pour automatiser les workflows métiers 
-                (support, marketing, CRM, e‑santé). Je travaille de bout en bout : cadrage avec les équipes métiers, 
-                design d'architectures RAG et d'agents IA, intégration d'APIs LLM (OpenAI, Anthropic, Mistral) et 
-                mise en production via CI/CD, Docker et monitoring (latence, coûts, qualité). Habitué aux environnements 
-                exigeants (Orange, e‑santé), je documente, forme les équipes et industrialise les cas d'usage IA pour 
-                qu'ils soient réellement utilisés.
+                Développeur full‑stack Java/Angular de formation avec 5+ ans d'expérience en environnements critiques
+                (Orange, e‑santé), j'ai évolué depuis 1 an et demi en freelance IA pour concevoir et déployer des
+                solutions basées sur les LLM. Je travaille de bout en bout : cadrage avec les équipes métiers, design
+                d'architectures RAG et d'agents IA, intégration d'APIs LLM (OpenAI, Anthropic, Mistral) et mise en
+                production via CI/CD, Docker et bonnes pratiques DevOps/MLOps/LLMOps (latence, coûts, qualité).
+                Habitué à piloter des projets (Agile/Scrum/kanban) et à documenter/former, je fais le lien entre
+                vision produit, contraintes techniques et industrialisation durable des solutions IA et des workflows
+                métiers grâce aux LLM.
               </p>
             </motion.div>
 
