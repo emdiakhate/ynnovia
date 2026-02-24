@@ -374,6 +374,7 @@ export default function ProjetsClients() {
               <div className="relative aspect-video bg-black">
                 {selectedProject.youtubeUrls ? (
                   <YouTubePlayer
+                    key={`video-${activeVideoIndex}`}
                     videoId={getYouTubeId(selectedProject.youtubeUrls[activeVideoIndex].url)}
                     title={selectedProject.name}
                     playbackRate={1.5}

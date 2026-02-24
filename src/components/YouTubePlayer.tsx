@@ -77,6 +77,9 @@ export function YouTubePlayer({ videoId, title, playbackRate = 1.5 }: YouTubePla
     onAPIReady(() => {
       if (destroyed || !containerRef.current) return;
 
+      // Clear container to remove any leftover elements from previous player
+      containerRef.current.innerHTML = '';
+
       const div = document.createElement('div');
       containerRef.current.appendChild(div);
 
