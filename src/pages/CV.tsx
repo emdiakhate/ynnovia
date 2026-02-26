@@ -131,9 +131,10 @@ const projects = [
 const skillsIA = {
   "LLM": ["OpenAI (GPT-4.x)", "Anthropic (Claude)", "Mistral", "Modèles open-source (HuggingFace)"],
   "RAG": ["Ingestion de données", "Chunking", "Embeddings (OpenAI/HF)", "Pinecone", "Chroma", "PGVector", "Recherche sémantique"],
-  "Agents IA": ["LangChain / LangGraph", "Orchestration multi-agents", "Tools calling", "Mémoire", "Routage workflows n8n/Make"],
+  "Agents IA": ["LangChain / LangGraph", "LangSmith", "Orchestration multi-agents", "Tools calling", "Mémoire"],
   "Prompt Engineering": ["Prompts structurés", "Few-shot", "Chain-of-thought", "Guardrails métier", "Évaluations automatiques"],
   "Fine-tuning": ["LoRA/QLoRA", "Modèles open-source", "Projet LLM Wolof"],
+  "Machine Learning & Deep Learning (bases)": ["NumPy", "Pandas", "Matplotlib", "Scikit-learn", "TensorFlow", "PyTorch", "Keras"],
   "Outils": ["n8n", "Make", "HubSpot", "Notion", "Airtable"],
 };
 
@@ -302,7 +303,7 @@ const CV = () => {
                     transition={{ delay: 0.5 }}
                   >
                     <span className="flex items-center gap-1.5"><Phone className="w-4 h-4 text-primary" /> +33 7 69 68 34 68</span>
-                    <span className="flex items-center gap-1.5"><Mail className="w-4 h-4 text-primary" /> diakhatemalick00@gmail.com</span>
+                    <span className="flex items-center gap-1.5"><Mail className="w-4 h-4 text-primary" /> contact@ynnovia.com</span>
                     <span className="flex items-center gap-1.5"><MapPin className="w-4 h-4 text-primary" /> Cergy, France</span>
                   </motion.div>
                 </div>

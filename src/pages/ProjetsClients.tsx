@@ -28,7 +28,7 @@ interface ProjectModalData {
   youtubeUrls?: { label: string; url: string }[];
 }
 
-const categories = ['Toutes', 'Communication', 'Finance', 'Marketing', 'CRM & Marketing', 'Infrastructure', 'Intelligence Artificielle'];
+const categories = ['Toutes', 'Communication', 'Finance', 'RH', 'CRM & Marketing', 'Marketing', 'E-commerce', 'Logistique', 'Immobilier', 'Juridique', 'Infrastructure', 'Intelligence Artificielle'];
 
 export default function ProjetsClients() {
   const [activeTab, setActiveTab] = useState<TabKey>('plateforme');
@@ -181,11 +181,11 @@ export default function ProjetsClients() {
                         <Badge className={`absolute top-4 left-4 ${project.categoryColor} backdrop-blur-sm`}>
                           {project.category}
                         </Badge>
-                        {(project.youtubeUrl || project.youtubeUrls) && (
-                          <span className="absolute top-4 right-4 px-2 py-1 rounded-full bg-red-600 text-white text-xs font-bold">
-                            Démo
-                          </span>
-                        )}
+                        <span className={`absolute top-4 right-4 px-2 py-1 rounded-full text-white text-xs font-bold ${
+                          (project.youtubeUrl || project.youtubeUrls) ? 'bg-red-600' : 'bg-yellow-600'
+                        }`}>
+                          {(project.youtubeUrl || project.youtubeUrls) ? 'Démo' : 'Démo à venir'}
+                        </span>
                       </div>
 
                       <div className="p-6">
